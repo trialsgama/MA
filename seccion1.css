@@ -34,3 +34,11 @@ article {
 	padding: 0px 0px;
 	
 }
+footer {
+	float:clear;
+	text-align: center;
+    width: 100%;
+    display: block;
+    bottom: 0px;
+   
+}

@@ -32,3 +32,11 @@ article {
 	float: center;
 	
 }
+footer {
+	float:clear;
+	text-align: center;
+    width: 100%;
+    display: block;
+    bottom: 0px;
+   
+}
