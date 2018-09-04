@@ -1,0 +1,28 @@
+body {
+	background-color: grey;
+	height:100%;
+	}
+header {
+	text-align: center;
+	}
+section {
+	float:center;
+	width: 100%;
+	height: 100%;
+}
+div.autos {
+	float: center;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+	width:22.5%;
+}
+
+img {
+	padding: 10px;
+	width: 300PX; 
+	height: 300PX;
+	margin: 20 px
+
+}
+	
