@@ -1,4 +1,6 @@
 body {
+	font-family: Arial;
+	
 	background-color: grey;
 	height:100%;
 	}
@@ -44,7 +46,7 @@ aside {
 }
 }
 footer {
-	
+	float:clear;
 	text-align: center;
     width: 100%;
     display: block;
