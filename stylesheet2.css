@@ -44,7 +44,7 @@ aside {
 }
 }
 footer {
-	float: clear;
+	
 	text-align: center;
     width: 100%;
     display: block;
@@ -59,11 +59,7 @@ img {
 	height: 50px;
 }
 
-.test {
-	
-	width: 10 px;
-	height:5px;
-}
+
 div.acolchados {
 	vertical-align: top;
     display: inline-block;
