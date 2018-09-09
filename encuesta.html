@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="encuesta.css">
+	<title>Aplicacion de test</title>
+	<script>
+	
+		function validacion() {
+		
+		var nombre = document.getElementById('nombre').value;
+		var apellido = document.getElementById('apellido').value;
+		var fecnac = document.getElementById('fecnac').value;
+		var sexo = document.getElementById('sexo').value;
+		var valor = document.getElementById('valor').value;
+		
+		if(nombre==null || nombre.lenght==0) {
+		alert('ERROR: el campo no puede estar vacio');
+		return false;
+		}
+		
+		if(apellido==null || apellido.lenght==0) {
+		alert('ERROR: el campo no puede estar vacio');
+		return false;
+		}
+		
+		if(fecnac==null || fecnac.lenght==0) {
+		alert('ERROR: el campo no puede estar vacio');
+		return false;
+		}
+		
+		if(sexo==null || sexo.lenght==0) {
+		alert('ERROR: el campo no puede estar vacio');
+		return false;
+		}
+		
+		if(valor==null || valor.lenght==0) {
+		alert('ERROR: el campo no puede estar vacio');
+		return false;
+		}
+		
+	</script>
+</head>
+<body>
+	<header>
+	<h1> Encuesta </h1>
+	</header>
+	<section>
+		<article>
+			<form action="" onsubmit="return validacion()">
+					<div class='forms'>
+						<form>
+						Nombre:
+						<input type="text" id='nombre' pattern="[A-Za-z]">
+						</form>	
+					</div>
+					<div class='forms'>
+						<form>
+						Apellido:
+						<input type="text" id='apellido' pattern="[A-Za-z]">
+						</form>	
+					</div>
+					<div class='forms'>
+						<form>
+						Fecha de nacimiento:
+						<input type="text" id='fecnac'>
+						</form>	
+					</div>
+					<div class='forms'>
+						<form>
+						Sexo:
+						<input type="text" id='sexo'>
+						</form>	
+					</div>
+					<div class='forms'>
+						<form>
+						Valor:
+						<input type="text" id='valor'>
+						</form>	
+					</div>
+					<div class='forms'>
+						<form>
+						Comentario:
+						<input type="text">
+						</form>	
+					</div>
+			<form>
+		</article>
+	</section>
+	<div class="botonera">
+	<div class="boton">
+		<input type="submit" value="Enviar información">
+	</div>
+	<div class="boton">
+		<input type="reset" value="Borrar información">
+	</div>
+	<div class="boton">
+		<input type="button" value="Cancelar" id="cancelar" name="cancelar" onclick= "self.location.href = 'index.html'" />
+	 </div>
+	 </div>
+	<footer>
+		<p> Posted by Leandro Estrella </p>
+	</footer>
+	
+</body>
+</html>
