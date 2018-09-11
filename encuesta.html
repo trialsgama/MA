@@ -43,18 +43,24 @@
 		
 		function validar() {
 			var nombre = document.getElementById("nombre").value;
-			var expreg = new RegExp("^[A-Za-z]");
-			if(expreg.test(nombre)!=true) {
-				alert("No puede tener caracteres especiales");
+			for (i=0; i<nombre.length-1; i++) {
+				var car = nombre.charCodeAt(i);
+				if (!(car>64 && car<91) && !(car>96 && car<123)) {
+					alert("flasheaste");
 				}
+				
+			}
 		}
 		
 		function validarA() {
 			var apellido = document.getElementById("apellido").value;
-			var expreg = new RegExp("^A-Za-z");
-			if(expreg.test(apellido)==true) {
-				alert("No puede tener caracteres especiales");
+			for (i=0; i<nombre.length-1; i++) {
+				var car = nombre.charCodeAt(i);
+				if (!(car>64 && car<91) && !(car>96 && car<123)) {
+					alert("flasheaste");
 				}
+				
+			}
 		}
 		
 	
@@ -69,7 +75,7 @@
 		
 		function cancelar() {
 		var resp = confirm("Deseas cancelar?");
-			if (resp == true) {
+			if (resp != true) {
 			window.location.href = "index.html";
 			}
 		}
@@ -85,17 +91,17 @@
 		<article>
 			<form action="" onsubmit="validacion()">
 					<div class='forms'>
-						<form>
+						<form action=""onkeypress="validar()">
 						
 						Nombre:
-						<input type="text" id="nombre" onsubmit="validar()">
+						<input type="text" id="nombre" onkeypress="validar()" >
 						</form>	
 					</div>
 					<div class='forms'>
-						
+						<form action="" onkeypress="validarA()">
 						Apellido:
-						<input type="text" id="apellido" onsubmit="validarA()" >
-						
+						<input type="text" id="apellido" onkeypress="validarA()">
+						</form>
 					</div>
 					<div class='forms'>
 						<form>
@@ -135,8 +141,7 @@
 	</div>
 	<div class="boton">
 		<form action="" onsubmit="cancelar()">
-		<input type="button" value="Cancelar" id="cancelar"/>
-		</form>
+		<input type="submit" value="Cancelar">
 	 </div>
 	 </div>
 	<footer>
