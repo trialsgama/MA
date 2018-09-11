@@ -4,78 +4,115 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="encuesta.css">
 	<title>Aplicacion de test</title>
-	<script>
+	<script type="text/javascript">
 	
 		function validacion() {
 		
-		var nombre = document.getElementById('nombre').value;
+		
+		var nombre = document.getElementById("nombre").value;
 		var apellido = document.getElementById('apellido').value;
 		var fecnac = document.getElementById('fecnac').value;
 		var sexo = document.getElementById('sexo').value;
 		var valor = document.getElementById('valor').value;
 		
-		if(nombre==null || nombre.lenght==0) {
+		if( nombre.length==0) {
 		alert('ERROR: el campo no puede estar vacio');
-		return false;
+		
 		}
 		
-		if(apellido==null || apellido.lenght==0) {
-		alert('ERROR: el campo no puede estar vacio');
-		return false;
+		if( apellido.length==0) {
+		alert('ERROR:no puede estar vacio');
+		
 		}
 		
-		if(fecnac==null || fecnac.lenght==0) {
-		alert('ERROR: el campo no puede estar vacio');
-		return false;
+		if( fecnac.length==0) {
+		alert('ERROR: el campo  estar vacio');
+		
 		}
 		
-		if(sexo==null || sexo.lenght==0) {
+		if( sexo.length==0) {
 		alert('ERROR: el campo no puede estar vacio');
-		return false;
+		
 		}
 		
-		if(valor==null || valor.lenght==0) {
+		if( valor.length==0) {
 		alert('ERROR: el campo no puede estar vacio');
-		return false;
+		
+		}
+	}
+		
+		function validar() {
+			var nombre = document.getElementById("nombre").value;
+			var expreg = new RegExp("^[A-Za-z]");
+			if(expreg.test(nombre)!=true) {
+				alert("No puede tener caracteres especiales");
+				}
 		}
 		
+		function validarA() {
+			var apellido = document.getElementById("apellido").value;
+			var expreg = new RegExp("^A-Za-z");
+			if(expreg.test(apellido)==true) {
+				alert("No puede tener caracteres especiales");
+				}
+		}
+		
+	
+		function mostrarResumen() {
+			var nombre = document.getElementById("nombre").value;
+			var apellido = document.getElementById('apellido').value;
+			var fecnac = document.getElementById('fecnac').value;
+			var sexo = document.getElementById('sexo').value;	
+			var valor = document.getElementById('valor').value;
+			alert(nombre + " " + apellido + " " + fecnac + " " + sexo + " " + valor);
+		}
+		
+		function cancelar() {
+		var resp = confirm("Deseas cancelar?");
+			if (resp == true) {
+			window.location.href = "index.html";
+			}
+		}
+	
 	</script>
 </head>
 <body>
 	<header>
 	<h1> Encuesta </h1>
 	</header>
+	
 	<section>
 		<article>
-			<form action="" onsubmit="return validacion()">
+			<form action="" onsubmit="validacion()">
 					<div class='forms'>
 						<form>
+						
 						Nombre:
-						<input type="text" id='nombre' pattern="[A-Za-z]">
+						<input type="text" id="nombre" onsubmit="validar()">
 						</form>	
 					</div>
 					<div class='forms'>
-						<form>
+						
 						Apellido:
-						<input type="text" id='apellido' pattern="[A-Za-z]">
-						</form>	
+						<input type="text" id="apellido" onsubmit="validarA()" >
+						
 					</div>
 					<div class='forms'>
 						<form>
 						Fecha de nacimiento:
-						<input type="text" id='fecnac'>
+						<input type="text" id="fecnac">
 						</form>	
 					</div>
 					<div class='forms'>
 						<form>
 						Sexo:
-						<input type="text" id='sexo'>
+						<input type="text" id="sexo">
 						</form>	
 					</div>
 					<div class='forms'>
 						<form>
 						Valor:
-						<input type="text" id='valor'>
+						<input type="text" id="valor">
 						</form>	
 					</div>
 					<div class='forms'>
@@ -84,18 +121,22 @@
 						<input type="text">
 						</form>	
 					</div>
-			<form>
+			</form>
 		</article>
 	</section>
 	<div class="botonera">
 	<div class="boton">
-		<input type="submit" value="Enviar información">
+		<form action="" onsubmit="mostrarResumen()">
+		<input type="submit" value="Submit">
+		</form>
 	</div>
 	<div class="boton">
 		<input type="reset" value="Borrar información">
 	</div>
 	<div class="boton">
-		<input type="button" value="Cancelar" id="cancelar" name="cancelar" onclick= "self.location.href = 'index.html'" />
+		<form action="" onsubmit="cancelar()">
+		<input type="button" value="Cancelar" id="cancelar"/>
+		</form>
 	 </div>
 	 </div>
 	<footer>
