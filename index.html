@@ -10,9 +10,16 @@
 	
 		$(document).ready(function() {
 		
-			$('form').click(function(e) {
-			
-				e.css("opacity",0.2);
+			$('.click').click(function(e) {
+				
+				
+				$(this).css("opacity",0.2);
+				if($(this).css("opacity")===0.2) {
+				
+					$(this).css("opacity",1);
+					
+				}
+				
 			
 			});
 	
@@ -68,30 +75,30 @@
 					<p> Seccion 1 Vasos </p>
 					<div class='vasos'>
 						<article>
-							<img src="wine-2891894_640.jpg"    />
+							<img src="wine-2891894_640.jpg" class="click" />
 						</article>
-						<br><span id="precio"> $30</span>
+						<br><span class="precio"> $30</span>
 					</div>
 		
 					<div class='vasos'>
 						
 						<article>
-							<img src="beer-2439237_640.jpg"    />
+							<img src="beer-2439237_640.jpg" class="click" />
 						</article>
 						
-						<br><span id="precio"> $120</span>
+						<br><span class="precio"> $120</span>
 					</div>
 					<div class='vasos'>
 						<article>
-							<img src="beer-3609281_640.jpg"  />
+							<img src="beer-3609281_640.jpg" class="click"  />
 						</article>
-						<br><span id="precio"> $100</span>
+						<br><span class="precio"> $100</span>
 					</div>
 					<div class='vasos'>
 						<article>
-							<img src="beers-1283566_640.jpg"  />
+							<img src="beers-1283566_640.jpg" class="click" />
 						</article>
-						<br><span id="precio"> $130 </span>
+						<br><span class="precio"> $130 </span>
 					</div>
 				</section>
 	
@@ -100,27 +107,27 @@
 					<p> Seccion 2 Acolchados </p>
 					<div class='acolchados'>
 						<article>
-							<img src="bed-1839183_640.jpg"  />
+							<img src="bed-1839183_640.jpg" class="click" />
 						</article>
-						<br><span id="precio"> $30</span>
+						<br><span class="precio"> $30</span>
 					</div>
 					<div class='acolchados'>
 						<article>
-							<img src="bed-1839184_640.jpg"  />
+							<img src="bed-1839184_640.jpg" class="click" />
 						</article>
-						<br><span id="precio"> $120</span>
+						<br><span class="precio"> $120</span>
 					</div>
 					<div class='acolchados'>
 						<article>
-							<img src="live-3104077_640.jpg"  />
+							<img src="live-3104077_640.jpg" class="click"  />
 						</article>
-						<br><span id="precio"> $100</span>
+						<br><span class="precio"> $100</span>
 					</div>
 					<div class='acolchados'>
 						<article>
-							<img src="pillows-1031079_640.jpg"  />
+							<img src="pillows-1031079_640.jpg" class="click" />
 						</article>
-						<br><span id="precio"> $130</span>
+						<br><span class="precio"> $130</span>
 					</div>
 				</section>
 				<section>
@@ -128,27 +135,27 @@
 					<p> Seccion 3 Autos coleccionables </p>
 					<div class='autos'>
 					<article>
-					<img src="ford-63930_640.jpg"  />
+					<img src="ford-63930_640.jpg" class="click"  />
 					</article>
-					<br><span id="precio">  $530</span>
+					<br><span class="precio">  $530</span>
 					</div>
 					<div class='autos'>
 					<article>
-					<img src="amg-1880381_640.jpg"  />
+					<img src="amg-1880381_640.jpg" class="click" />
 					</article>
-					<br><span id="precio">  $420</span>
+					<br><span class="precio">  $420</span>
 					</div>
 					<div class='autos'>
 					<article>
-					<img src="auto-788747_640.jpg"  />
+					<img src="auto-788747_640.jpg" class="click" />
 					</article>
-					<br><span id="precio">  $100</span>
+					<br><span class="precio">  $100</span>
 					</div>
 					<div class='autos'>
 					<article>
-					<img src="audi-1890494_640.jpg"  />
+					<img src="audi-1890494_640.jpg" class="click" />
 					</article>
-					<br><span id="precio">  $230</span>
+					<br><span class="precio">  $230</span>
 					</div>
 				</section>
 				<section>
@@ -156,27 +163,27 @@
 				<p> Seccion 4 Prendas</p>
 					<div class='prendas'>
 					<article>
-					<img src="store-1338629_640.jpg"  />
+					<img src="store-1338629_640.jpg" class="click" />
 					</article>
-					<br><span id="precio">  $530</span>
+					<br><span class="precio">  $530</span>
 					</div>
 					<div class='prendas'>
 					<article>
-					<img src="jeans-2979818_640.jpg"  />
+					<img src="jeans-2979818_640.jpg" class="click" />
 					</article>
-					<br><span id="precio">  $420</span>
+					<br><span class="precio">  $420</span>
 					</div>
 					<div class='prendas'>
 					<article>
-					<img src="fashion-1283863_640.jpg"  />
+					<img src="fashion-1283863_640.jpg" class="click" />
 					</article>
-					<br><span id="precio">  $100</span>
+					<br><span class="precio">  $100</span>
 					</div>
 					<div class='prendas'>
 					<article>
-					<img src="fashion-918446_640.jpg"  />
+					<img src="fashion-918446_640.jpg" class="click" />
 					</article>
-					<br><span id="precio">  $230</span>
+					<br><span class="precio">  $230</span>
 					</div>
 				</section>
 			</form>
