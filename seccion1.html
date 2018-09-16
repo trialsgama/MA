@@ -4,6 +4,15 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="seccion1.css">
 	<title>Aplicacion de test</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+	$(document).ready(function () {
+	$('#1').fadeOut(400);
+	});
+	</script>
+	
+	
 </head>
 <body>
 	<header>
@@ -11,9 +20,10 @@
 	</header>
 	<section>
 		<article>
+				<form>
 					<div class='vasos'>
 						<article>
-							<img src="wine-2891894_640.jpg"/>
+							<img src="wine-2891894_640.jpg" id="1"/>
 						</article>
 						<br><span> Copa de vino $30</span>
 						<br><span> Este articulo fue hecho en Taiwan por artesanos del vidrio</span>
@@ -39,6 +49,7 @@
 						<br><span> Jarra de cerveza $130</span>
 						<br><span> Elemento hecho por la tribu Maori en Nueva Zelanda</span>
 					</div>
+			</form>
 		</article>
 	</section>
 	<footer>

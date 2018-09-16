@@ -4,6 +4,63 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="encuesta.css">
 	<title>Aplicacion de test</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(
+	
+	function () {
+	$('.mensaje').hide();
+	var value= $("input.inputs").val();
+	if (value === "") {
+		alert("no puede estar vacio");
+		}
+		$('#name').keydown(function (e) {
+          var arr = [8,9,16,17,20,35,36,37,38,39,40,45,46];
+
+			for(var i = 65; i <= 90; i++){
+			arr.push(i);
+			}
+			if(jQuery.inArray(event.which, arr) === -1){
+			event.preventDefault();
+			}
+		});
+		$('#surname').keydown(function (e) {
+          var arr = [8,9,16,17,20,35,36,37,38,39,40,45,46];
+
+			for(var i = 65; i <= 90; i++){
+			arr.push(i);
+			}
+			if(jQuery.inArray(event.which, arr) === -1){
+			event.preventDefault();
+			}
+		});
+		
+		$('#submit').click(function() {
+		
+		$("div.mensaje").show();
+		$("div.mensaje").delay(5000).hide(600);
+		
+		});
+	});
+	
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!----
 	<script type="text/javascript">
 	
 		function validacion() {
@@ -81,6 +138,7 @@
 		}
 	
 	</script>
+	*/ ----->
 </head>
 <body>
 	<header>
@@ -89,60 +147,63 @@
 	
 	<section>
 		
-			<form action="" onsubmit="validacion()">
+			<form action="" method="post">
 					<div class='forms'>
-						<form action=""onkeypress="validar()">
+						
 						
 						Nombre:
-						<input type="text" id="nombre" onkeypress="validar()" >
-						</form>	
+						<input type="text" id="name" class="inputs"  >
+						
 					</div>
 					<div class='forms'>
-						<form action="" onkeypress="validarA()">
+						
 						Apellido:
-						<input type="text" id="apellido" onkeypress="validarA()">
-						</form>
+						<input type="text" id="surname" class="inputs" >
+						
 					</div>
 					<div class='forms'>
-						<form>
+						
 						Fecha de nacimiento:
-						<input type="text" id="fecnac">
-						</form>	
+						<input type="text" class="inputs" >
+						
 					</div>
 					<div class='forms'>
-						<form>
+						
 						Sexo:
-						<input type="text" id="sexo">
-						</form>	
+						<input type="text" class="inputs">
+						
 					</div>
 					<div class='forms'>
-						<form>
+						
 						Valor:
-						<input type="text" id="valor">
-						</form>	
+						<input type="text" class="inputs">
+						
 					</div>
 					<div class='forms'>
-						<form>
+						
 						Comentario:
 						<input type="text">
-						</form>	
+						
 					</div>
 			</form>
 	</section>
 	<div class="botonera">
 	<div class="boton">
-		<form action="" onsubmit="mostrarResumen()">
-		<input type="submit" value="Submit">
-		</form>
+		
+		<input type="submit" id="submit" value="Submit">
+		
 	</div>
 	<div class="boton">
 		<input type="reset" value="Borrar información">
 	</div>
 	<div class="boton">
-		<form action="" onsubmit="cancelar()">
+		
 		<input type="submit" value="Cancelar">
 	 </div>
 	 </div>
+	<div class = "mensaje">
+	<p id="completed"> Gracias por completar la encuesta, trolazo </p>
+	</div>
 	<footer>
 		<p> Posted by Leandro Estrella </p>
 	</footer>
